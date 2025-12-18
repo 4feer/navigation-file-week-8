@@ -7,8 +7,11 @@
 <body>
 <h1>Welcome</h1>
 <p>Fill your information</p>
+<button onclick="mula()"> START </button>
 
-<form action="index.php"method="POST" style="background-color:pink;color: green"><br>
+<br>
+
+<form onsubmit="hantaq();return false;"POST" style="background-color:pink;color: green"><br>
     <label for ="name">Name</label>
 	<input type ="text" id="name" required> <br>
 	
@@ -74,5 +77,26 @@
 	
 <form>
 
+<hr>
+<hr3> submitted info> </h3>
+<p id="result"></p>
+
 
 </form>
+
+<script>
+alert("selamat datang");
+function mula (){
+    alert ("terima kasih");
+	VAR name = getELementById("name").value;
+	VAR name = getELementById("Phone").value;
+	VAR name = getELementById("email").value;
+	alert ("terima kasih" +name + kami akan hubung anda di" + fon );
+	document.getElementById("result).innerHTML =
+	"Terima Kasih" + nama + ". kami akan hubungi anada di" + fon + " atau " + email'). <br>
+	}
+	
+	</script>
+	</body>
+	</html>
+	
