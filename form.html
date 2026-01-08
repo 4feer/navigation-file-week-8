@@ -4,14 +4,22 @@
     <title>Borang Forms</title>
 </head>
 
-<body>
-<h1>Welcome</h1>
+<body id="first-page">
+
+<h1 id="Welcome">Welcome</h1>
+<button onclick="welc()" style="font-size:8px"> Change This Color</button>
 <p>Fill your information</p>
+
 <button onclick="mula()"> START </button>
+<button onclick="darkmode()"style="background-color:pink; color:white">Dark mode</button>
+<button onclick="lightmode()"style="background-color:papayawhip; color:white">light mode</button>
 
-<br>
-
-<form onsubmit="hantaq();return false;"POST" style="background-color:pink;color: green"><br>
+<br><br>
+<button onclick="largetext()">Large Text</button>
+<button onclick="smalltext()">Small Text</button>
+<button onclick="borang()">Form background change</button>
+<br><br>
+<form id="borang" onsubmit="hantaq();return false;"POST" style="background-color:pink;color: green"><br>
     <label for ="name">Name</label>
 	<input type ="text" id="name" required> <br>
 	
@@ -77,23 +85,55 @@
 	
 <form>
 
-<hr>
-<hr3> submitted info> </h3>
+<br>
+<h3> submitted info </h3>
 <p id="result"></p>
 
 
 </form>
 
 <script>
-alert("selamat datang");
-function mula (){
-    alert ("terima kasih");
-	VAR name = getELementById("name").value;
-	VAR name = getELementById("Phone").value;
-	VAR name = getELementById("email").value;
-	alert ("terima kasih" +name + kami akan hubung anda di" + fon );
-	document.getElementById("result).innerHTML =
-	"Terima Kasih" + nama + ". kami akan hubungi anada di" + fon + " atau " + email'). <br>
+alert("Welcome Back");
+
+    function mula() {
+        alert("You can start filling the form. What are you waiting for!!!");
+    }
+
+    function hantar() {
+        var nama = document.getElementById("name").value;
+   var Phone = document.getElementById("Phone").value;
+   var Email = document.getElementById("Email").value;
+
+        alert("Terima kasih, " + nama);
+        document.getElementById("result").innerText = "Submission received for: " + nama +" "+ Phone+" "+ Email ;
+    }
+	
+	function darkmode () {
+	
+	document.getElementById("first-page").style.color="papayawhip";
+	document.getElementById("first-page").style.backgroundColor="black";
+	
+	}
+	
+	function lightmode () {
+	
+	document.getElementById("first-page").style.color="pink";
+	document.getElementById("first-page").style.backgroundColor="brown";
+	
+	}
+	
+	function largetext  () {
+	
+	document.getElementById("first-page").style.fontSize="30px";
+	}
+	
+	function smalltext  () {
+	
+	document.getElementById("first-page").style.fontSize="10px";
+	}
+	
+	function borang() {
+	document.getElementById("borang").style.backgroundColor="grey";
 	}
 	
 	</script>
